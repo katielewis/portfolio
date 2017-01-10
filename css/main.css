@@ -95,11 +95,51 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+    box-sizing: border-box;;
+    font-family: 'Poppins', sans-serif;
+}
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+html {
+  font-size: 16px;
+}
 
+/* Header ================================= */
+header {
+    background-color: #093034;
+    height: 100vh;
+    clear: both;
+}
 
+#logo {
+    width: 20%;
+    margin: 0 auto;
+    max-width: 60px;
+    position: relative;
+    transform: translateY(-50%);
+    top: 40%;
+    float: left;
+}
 
+nav {
+    float: right;
+    text-align: right;
+    margin: 5% 5% 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 0 15px;
+    font-weight: 300;
+}
 
 
 
