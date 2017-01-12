@@ -141,7 +141,12 @@ a {
     font-weight: 300;
 }
 
-
+/* Project Tiles ================================= */
+#projects {
+  clear: both;
+  max-width: 800px; /* look up average size for laptop screen */
+  height: 100vh;
+}
 
 
 
