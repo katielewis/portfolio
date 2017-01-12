@@ -96,7 +96,7 @@ textarea {
    ========================================================================== */
 
 * {
-    box-sizing: border-box;;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -114,6 +114,7 @@ html {
 header {
     background-color: #093034;
     height: 100vh;
+    max-height: 640px;
     clear: both;
 }
 
@@ -168,10 +169,13 @@ nav a:last-of-type {
 #projects {
   clear: both;
   max-width: 1000px; /* look up average size for laptop screen */
-  height: 100vh;
-  margin:5% auto;
+  margin: 5% auto;
 }
 
+.row {
+  clear: both;
+}
+/* bootstrap way
 .oneThird {
   display: flex;
   justify-content: center;
@@ -196,8 +200,45 @@ nav a:last-of-type {
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%
+}*/
+
+.tile {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+.tileImg {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%; /*may need to break up for horz and vert images */
+}
+
+.oneThird {
+  width: 33%;
+  height: 20rem;
+  background-color: pink;
+}
+
+.oneThirdMiddle {
+  width: 34%;
+  height: 20rem;
+  background-color: red;
+}
+.twoThirds {
+  width: 67%;
+  height: 20rem;
+  background-color: green;
+}
+
+.fullWidth {
+  width: 100%;
+  height: 20rem;
+  background-color: blue;
+}
 
 
 
