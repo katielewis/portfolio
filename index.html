@@ -19,7 +19,11 @@
     <body>
 
     <header>
-        <a id="logo" href="index.html"><img src="img/Logo.png" alt="logo"></a>
+        <a href="index.html">
+            <img src="img/Logo.png" alt="logo" id="logo">
+            <h1>Katie Lewis</h1>
+            <h2>designer &amp; strategic thinker</h2>
+        </a>
         <nav>
             <a href="index.html">work</a>
             <a href="#">about</a>
@@ -27,12 +31,14 @@
         </nav>
     </header>
 
-    <section id="projects" class="container-fluid">
+    <section id="projects" class="container-fluid clearfix">
+    <!-- maybe this needs to be be percents so that the height can match the width? -->
         <div class="row">
-            <div class="col-md-5">.col-md-5
-                <img src="img/street-1600_800.png" class="img-responsive" alt="Responsive image">
+            <div class="col-md-5 oneThird">
+                <img src="img/street-1600_800.png" alt="Responsive image">
             </div>
-            <div class="col-md-7">.col-md-7
+            <div class="col-md-7 twoThirds">
+                <img src="img/street-1600_800.png" alt="Responsive image">
             </div>
         </div>
         <div class="row">
@@ -53,7 +59,7 @@
             <div class="col-md-5">.col-md-7
             </div>
         </div>
-    </section class="clearfix">
+    </section>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
