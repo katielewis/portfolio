@@ -159,6 +159,10 @@ header nav {
     margin: 5% 5% 0 0;
 }
 
+header a {
+  text-decoration: none;
+}
+
 header nav a {
     text-decoration: none;
     color: white;
