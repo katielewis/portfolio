@@ -110,12 +110,20 @@ html {
   font-size: 16px;
 }
 
+body {
+  padding-bottom: 500px; /*should we width of footer. may need hs */
+}
+
+
+
 /* Header ================================= */
 header {
-    background-color: #093034;
+    background-color: #16181a;
     height: 100vh;
     max-height: 640px;
     clear: both;
+    z-index: 1020;
+    position: relative;
 }
 
 #logo {
@@ -128,7 +136,7 @@ header {
 }
 
 h1 {
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0;
@@ -138,20 +146,20 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: white;
   font-weight: 300;
   font-size: 1rem;
   margin-top: 0;
   display: inline-block;
 }
 
-nav {
+header nav {
     float: right;
     text-align: right;
     margin: 5% 5% 0 0;
 }
 
-nav a {
+header nav a {
     text-decoration: none;
     color: white;
     display: inline-block;
@@ -166,10 +174,21 @@ nav a:last-of-type {
 
 /* Project Tiles ================================= */
 
+#whiteSpace {
+  background-color: white;
+  position: relative;
+  z-index: 1005;
+  width: 100%;
+  clear: both;
+  overflow:auto
+}
+
 #projects {
   clear: both;
-  max-width: 1000px; /* look up average size for laptop screen */
+  max-width: 1000px; /* set up another option for xl screens */
   margin: 5% auto;
+  z-index: 1010;
+  position: relative;
 }
 
 .row {
@@ -214,7 +233,7 @@ nav a:last-of-type {
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
-  height: 100%; /*may need to break up for horz and vert images */
+  height: 100%; /*break up for horz and vert images */
 }
 
 .oneThird {
@@ -240,8 +259,68 @@ nav a:last-of-type {
   background-color: blue;
 }
 
+/* Illustraion ================================= */
+/* should be revealed on scroll  */
+#illustration {
+  height: 20rem;
+  background-color: lightgray;
+}
+
+/* Footer ================================= */
+footer {
+  position: fixed;
+  background-color: black;
+  left:0px;
+  bottom:0px;
+  width: 100%;
+  z-index: 1000;
+  clear: both;
+}
+
+footer h3 {
+  color: teal;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #16181a;
+  padding: 5%;
+  margin: 0;
+}
+
+footer button {
+  color: white;
+  background-color: #16181a;
+  border: solid 3px teal;
+  font-weight: 300; 
+  margin-left: 1rem;
+  padding: .5rem 1rem;
+}
+
+footer p {
+  color: #a8afb9;
+  float: left;
+  margin: 1.5rem 0 1.5rem 5%;
 
 
+}
+
+footer nav {
+    float: right;
+    text-align: right;
+    margin: 1.5rem 5% 1.5rem 0;
+  }
+
+footer nav a {
+  color: #a8afb9;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: .1rem;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+footer nav a:last-of-type {
+  padding: 0 0 0 1rem;
+}
 
 /* ==========================================================================
    Helper classes
