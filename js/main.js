@@ -5,17 +5,34 @@
 //else use header.height.
 //see if something like this works  
 
-var navBar = $('nav');
+// fix the margin-top of the nav 
+
+//make sure none of this is screwing up foot nav
+
+var navBar = $('.headerNav');
 	navScrolled = "navScrolled";
-	header = $('header').height();
+	headerHeight = $('header').height();
+
+$(document).ready(function() {
+	if(headerHeight > 640) {
+		$('header').addClass('maxHeader');
+		$('.headerNav').addClass('maxNav');
+	}
+	else {
+		$('header').removeClass('maxHeader');
+		$('.headerNav').removeClass('maxNav');
+	}
+});
 
 $(window).scroll(function () {
-	if( $(this).scrollTop() > header) {
+	if( $(this).scrollTop() > headerHeight) {
 		navBar.addClass('navScrolled');
 	}
 	else {
 		navBar.removeClass('navScrolled');
 	}
+
+
 });
 
 // get the scroll top from the top to the end of the project section
