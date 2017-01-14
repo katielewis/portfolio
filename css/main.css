@@ -111,7 +111,7 @@ html {
 }
 
 body {
-  padding-bottom: 500px; /*should we width of footer. may need hs */
+  padding-bottom: 500px; /*should we width of footer. may need js */
 }
 
 
@@ -119,16 +119,38 @@ body {
 /* Header ================================= */
 header {
     background-color: #16181a;
-    height: 100vh;
-    max-height: 640px;
+    height: 80vh;
+    width: 100%;
     clear: both;
-    z-index: 1020;
-    position: relative;
+    z-index: 600;
+    position: fixed;
+    top: 0;
+}
+
+.navScrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0;
+}
+
+/*.logoContainer {
+    position: fixed; 
+    width: 100%; 
+}
+*/
+
+nav {
+  background-color: white;
+  position: relative;
+  z-index: 1030;
+  padding-bottom: 5%;
+  margin-top: 450px; /*may need js to determine this value if header is vh if header greater than 640 then use 640 here */
 }
 
 #logo {
     width: 5rem;
-    position: relative;
+
     /* transform: translateY(-50%);
     top: 40%; not yet*/ 
     float: left;
@@ -136,7 +158,7 @@ header {
 }
 
 h1 {
-    color: white;
+    color: black;
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0;
@@ -146,45 +168,48 @@ h1 {
 }
 
 h2 {
-  color: white;
+  color: black;
   font-weight: 300;
   font-size: 1rem;
   margin-top: 0;
   display: inline-block;
 }
 
-header nav {
+.navLinks {
     float: right;
     text-align: right;
     margin: 5% 5% 0 0;
+  /*  position: fixed; 
+    width: 100%;
+    right: 0; */
 }
 
-header a {
+nav a {
   text-decoration: none;
 }
 
-header nav a {
+.navLinks a {
     text-decoration: none;
-    color: white;
+    color: black;
     display: inline-block;
     padding: 0 1rem;
     font-weight: 300;
     letter-spacing: .1rem;
 }
 
-nav a:last-of-type {
+.navLinks a:last-of-type {
   padding: 0 0 0 1rem;
 }
 
 /* Project Tiles ================================= */
 
 #whiteSpace {
-  background-color: white;
+  background-color: red;
   position: relative;
   z-index: 1005;
   width: 100%;
   clear: both;
-  overflow:auto
+  overflow:auto;
 }
 
 #projects {
@@ -277,7 +302,7 @@ footer {
   left:0px;
   bottom:0px;
   width: 100%;
-  z-index: 1000;
+  z-index: 800;
   clear: both;
 }
 
