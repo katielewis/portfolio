@@ -111,61 +111,75 @@ html {
 }
 
 body {
-  padding-bottom: 500px; /*should we width of footer (with illustration). may need js */
+  padding-bottom: 500px; /*should we height of footer (with illustration). may need js */
+  padding-top: 60vh; /*height of header */
 }
 
 
 
 /* Header ================================= */
 header {
-    background-color: #16181a;
-    height: 80vh;
-    width: 100%;
-    clear: both;
-    z-index: 600;
-    position: fixed;
-    top: 0;
+  background-color: #16181a;
+  height: 60vh;
+  width: 100%;
+  z-index: 600;
+  position: fixed;
+  top: 0;
+  clear: both;
 }
 
+/* may also need to fix the padding, bottom */
+.headerZ {
+  z-index: 200;
+}
+
+/* for old header height
 .maxHeader {
-  height: 500px;
-}
-
-
-/*.logoContainer {
+  height: 450px;
+.maxNav {
+  margin-top: 450px;
+.logoContainer {
     position: fixed; 
-    width: 100%; 
-}
-*/
+    width: 100%;   
+} */
 
+/* needs a margin bottom the size of the height */
 .headerNav {
+  height: 5rem;
   background-color: white;
   position: relative;
   z-index: 1030;
-  padding-bottom: 5%;
-  margin-top: 80vh; /*may need js to determine this value if header is vh if header greater than 640 then use 640 here */
+  height: 5rem;
+  margin-bottom: -5rem;
+  padding: 1.9rem 5%;
 }
 
 .navScrolled {
   position: fixed;
   top: 0;
   width: 100%;
-  margin-top: 0;
+  border-bottom: solid 4px teal;
+
 }
 
-.maxNav {
-  margin-top: 500px;
-}
 
 #logo {
-    width: 5rem;
-
-    /* transform: translateY(-50%);
+  width: 3rem;
+  float: left;
+  margin-top: -.9rem;
+  /* transform: translateY(-50%);
     top: 40%; not yet*/ 
-    float: left;
-    margin: 3% 0 0 5%;
 }
 
+ h1 {
+  color: black;
+  font-size: 1.2rem;
+  
+  line-height: 0;
+  display: inline-block;
+ }
+
+/* replaced with jpg
 h1 {
     color: black;
     font-weight: 700;
@@ -182,12 +196,11 @@ h2 {
   font-size: 1rem;
   margin-top: 0;
   display: inline-block;
-}
+} */
 
 .navLinks {
     float: right;
     text-align: right;
-    margin: 5% 5% 0 0;
   /*  position: fixed; 
     width: 100%;
     right: 0; */
@@ -201,30 +214,31 @@ nav a {
     text-decoration: none;
     color: black;
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 .8rem;
     font-weight: 300;
     letter-spacing: .1rem;
 }
 
 .navLinks a:last-of-type {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 .8rem;
 }
 
 /* Project Tiles ================================= */
 
 #whiteSpace {
-  background-color: red;
+  background-color: white;
   position: relative;
   z-index: 1005;
   width: 100%;
   clear: both;
-  overflow:auto;
+  overflow: auto;
+  padding: 7rem 5% 5% 5%;
 }
 
 #projects {
   clear: both;
   max-width: 1000px; /* set up another option for xl screens */
-  margin: 5% auto;
+  margin: 0 auto;
   z-index: 1010;
   position: relative;
 }
@@ -311,7 +325,7 @@ footer {
   left:0px;
   bottom:0px;
   width: 100%;
-  z-index: 200;
+  z-index: 400;
   clear: both;
 }
 
@@ -445,6 +459,8 @@ footer nav a:last-of-type {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
+
+/*for screens greater than 1100, add padding between projects, possibly make the content wider/taller*/
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),

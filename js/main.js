@@ -5,16 +5,14 @@
 //else use header.height.
 //see if something like this works  
 
-// fix the margin-top of the nav 
+// may need to add 5% padding-bottom to boddy on scroll to make up for the whitespace 
 
-//make sure none of this is screwing up foot nav
 
-var navBar = $('.headerNav');
-	navScrolled = "navScrolled";
-	headerHeight = $('header').height();
+//old header height
+/* 
 
 $(document).ready(function() {
-	if(headerHeight > 640) {
+	if(headerHeight > 450) {
 		$('header').addClass('maxHeader');
 		$('.headerNav').addClass('maxNav');
 	}
@@ -23,13 +21,19 @@ $(document).ready(function() {
 		$('.headerNav').removeClass('maxNav');
 	}
 });
+*/
+var navBar = $('.headerNav');
+	navScrolled = ".navScrolled";
+	headerHeight = $('header').height();
 
 $(window).scroll(function () {
 	if( $(this).scrollTop() > headerHeight) {
 		navBar.addClass('navScrolled');
+		$('header').addClass('headerZ');
 	}
 	else {
 		navBar.removeClass('navScrolled');
+		$('header').removeClass('headerZ');
 	}
 
 
