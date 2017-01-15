@@ -326,10 +326,11 @@ nav a {
   z-index: 1500;
   clear: both;
   overflow: auto;
+  height: 5rem;
 }
 
 .test {
-  background-color: blue;
+  background-color: black;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -338,13 +339,13 @@ nav a {
 .footerNav p {
   color: #a8afb9;
   float: left;
-  margin: 1.5rem 0 1.5rem 5%;
+  margin: 1.9rem 0 0 5%;
 }
 
 .footerNav nav {
     float: right;
     text-align: right;
-    margin: 1.5rem 5% 1.5rem 0;
+    margin: 1.9rem 5% 0 0;
 }
 
 .footerNav nav a {
@@ -362,10 +363,11 @@ nav a {
 
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: 5rem;
   width: 100%;
   display: relative;
   z-index: 400;
+
 }
 
 footer h3 {
