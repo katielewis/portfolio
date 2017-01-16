@@ -110,15 +110,17 @@ html {
   font-size: 16px;
 }
 
-body {
-  padding-bottom: 500px; /*should we height of footer (with illustration). may need js */
+.landingPage {
+  padding-bottom: 500px; /*should we height of footer (with illustration)*/
   padding-top: 60vh; /*height of header */
 }
 
-
+.otherPages {
+  padding-bottom: 16rem; /*should we height of footer (with illustration)*/
+}
 
 /* Header ================================= */
-header {
+.splashPattern {
   background-color: #16181a;
   height: 60vh;
   width: 100%;
@@ -312,13 +314,6 @@ nav a {
   background-color: blue;
 }
 
-/* Illustraion ================================= */
-/* should be revealed on scroll  */
-#illustration {
-  height: 20rem;
-  background-color: lightgray;
-}
-
 /* Footer ================================= */
 .footerNav {
   background-color: black;
@@ -329,7 +324,7 @@ nav a {
   height: 5rem;
 }
 
-.test {
+.stickyFooter {
   background-color: black;
   position: fixed;
   bottom: 0;
@@ -361,12 +356,20 @@ nav a {
   padding: 0 0 0 1rem;
 }
 
+/* Revealed Footer ================================= */
+#illustration {
+  height: 20rem;
+  background-color: lightgray;
+}
+
 footer {
+  height: 31rem;
   position: fixed;
   bottom: 5rem;
   width: 100%;
   display: relative;
   z-index: 400;
+  background-color: #16181a;
 
 }
 
@@ -374,7 +377,6 @@ footer h3 {
   color: teal;
   font-size: 2rem;
   text-align: center;
-  background-color: #16181a;
   padding: 5%;
   margin: 0;
 }
@@ -387,6 +389,18 @@ footer button {
   margin-left: 1rem;
   padding: .5rem 1rem;
 }
+
+.otherFooters {
+  height: 11rem;
+}
+/* Project Tiles ================================= */
+.aboutMe {
+  height: 100vh;
+  background-color: blue;
+  z-index: 1007;
+  position: relative;
+}
+
 
 /* ==========================================================================
    Helper classes
